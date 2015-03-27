@@ -1,0 +1,62 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class GameUser {
+	
+	private String name;
+	private String password;
+	private static int wins;
+	private static int losses;
+	//private int userIndex = 0;
+	//static GameUser[] userArray = new GameUser[100];
+	//private static Set<GameUser> userSet = new HashSet<GameUser>();
+	//private static HashMap<String, String>  userMap = new HashMap();
+	
+	public GameUser(String userName, String userPass, int numberWins, int numberLosses)
+	{
+		this.name = userName;
+		this.password = userPass;
+		this.wins = numberWins;
+		this.losses = numberLosses;
+		ScoreBoard.userArray[ScoreBoard.userIndex] = this;
+		ScoreBoard.userMap.put(this.name, this.password);
+		ScoreBoard.userIndex++;
+	}
+	
+	public static String getName()
+	{
+		return name;
+	}
+	
+	public static int getWins()
+	{
+		return wins;
+	}
+	
+	public static int getLosses()
+	{
+		return losses;
+	}
+	
+	public static void setWins(int n)
+	{
+		wins = n;
+	}
+	
+	public static void setLosses(int n)
+	{
+		losses = n;
+	}
+	
+
+	
+	/** dont think ill need this - done in constructor
+	public static void addUserToMap(String user, String pass)
+	{
+		userMap.put(user, pass);
+	}
+	**/
+
+}

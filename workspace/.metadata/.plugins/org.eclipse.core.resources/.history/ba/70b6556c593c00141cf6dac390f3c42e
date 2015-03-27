@@ -1,0 +1,32 @@
+import java.util.HashMap;
+
+
+public class ScoreBoard {
+	
+	static int userIndex = 0;
+	static GameUser[] userArray = new GameUser[100];
+	static HashMap<String, String>  userMap = new HashMap();
+	
+	
+	public static boolean nameExists(String s)
+	{
+		
+		boolean exists = false;
+		
+		
+		if(userMap.containsValue(s))
+		{
+			exists = true;
+		}
+		
+		return exists;
+	}
+	
+	public static String getPassword(String username)
+	{
+		String pass = userMap.get(username);
+		return pass;
+	}
+	
+
+}

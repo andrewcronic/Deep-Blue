@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Client.java&apos; to &apos;TicTacToeClient.java&apos;&#x0D;&#x0A;- Original project: &apos;TicTacToe2&apos;&#x0D;&#x0A;- Original element: &apos;Client.java&apos;&#x0D;&#x0A;- Renamed element: &apos;TicTacToeClient.java&apos;" description="Rename compilation unit &apos;Client.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Client.java" name="TicTacToeClient.java" references="false" stamp="1409070515350" version="1.0"/>
+</session>

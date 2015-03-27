@@ -1,0 +1,117 @@
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class MainMenu {
+	
+    public static void main(final String[] args) throws Exception {
+        //while (true) {
+        	
+        	
+            /**
+        	String serverAddress = (args.length == 0) ? "localhost" : args[1];
+            TicTacToeClient client = new TicTacToeClient(serverAddress);
+            client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            client.frame.setSize(240, 240);
+            client.frame.setVisible(true);
+            client.frame.setResizable(true);
+            client.play();
+            if (!client.wantsToPlayAgain()) {
+                break;
+                }
+                **/
+        	final JFrame mainFrame = new JFrame("Main Menu");
+        	JPanel mainPanel = new JPanel();
+        	JButton playButton = new JButton("Play Game");
+        	JButton statButton = new JButton("View Leaderboards / STATS");
+        	JButton exitButton = new JButton("Exit Game");
+        	mainFrame.setLayout(new BorderLayout());
+        	mainFrame.setSize(300, 150);
+        	mainFrame.setLocationRelativeTo(null);
+        	mainPanel.add(playButton);
+        	mainPanel.add(statButton);
+        	mainPanel.add(exitButton);
+        	
+        	
+        	mainFrame.add(mainPanel, BorderLayout.CENTER);
+        	mainPanel.setVisible(true);
+        	mainFrame.setVisible(true);
+        	
+        	
+        	  playButton.addActionListener(new ActionListener() {
+ 		       	 
+  	            public void actionPerformed(ActionEvent e)
+  	            {
+  	            	
+  	            	mainFrame.dispose();
+  	            	
+  
+  	            	try {
+  	            				
+  	            		String serverAddress = (args.length == 0) ? "localhost" : args[1];
+  	            		TicTacToeClient newClient = new TicTacToeClient(serverAddress, "test");
+  	            		newClient.main(args);
+  	            		
+						//TicTacToeClient.main(args);
+						
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+
+  	              
+  	              }
+  	            	
+  	        }); 
+        	  
+        	  
+        	  statButton.addActionListener(new ActionListener() {
+  		       	 
+    	            public void actionPerformed(ActionEvent e)
+    	            {
+    	            	
+    	            	JFrame f = new JFrame("LEADERBOARDS");
+    	            	f.setSize(400,400);
+    	            	f.setVisible(true);
+    	            	
+    	                
+    	                        
+    	                
+    	            }
+    	        }); 
+        	  
+        	  
+        	  exitButton.addActionListener(new ActionListener() {
+  		       	 
+    	            public void actionPerformed(ActionEvent e)
+    	            {
+    	            	
+    	            	
+    	                System.exit(0);
+    	                        
+    	                
+    	            }
+    	        }); 
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+        	  
+  	     
+        	
+        	
+        	  }
+
+}
